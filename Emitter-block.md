@@ -1,23 +1,23 @@
-Emitter is a Mappet block which emits redstone signal, when given expression evaluates a non-zero value (i.e. not a `0`). It could be used to connect Mappet's [expressions](./Expressions) with redstone contraptions, for example:
+Излучатель это такой блок в Маппете, который излучает сигнал редстоуна в том случае, если заданное выражение выдаёт ненулевое значение (т.е. буквально не `0`). Его можно использовать дабы соединять между собой [выражения](./Expressions) Маппета устройствами из редстоуна, к примеру:
 
-* Open a redstone door upon completion of a specific quest
-* Extend a platform (using a piston) for parkour when player holds a specific item
-* Repeat some command block command by using world time every *X* ticks, etc.
+* Открыть редстоуном дверь после завершения определённого квеста
+* Расширить платформу (используя поршни) для паркура, когда игрок подбирает определённый предмет
+* Повторить какую-нибудь команду из командного блока используя мировое время каждые *X* тиков, и т.д.
 
-You can acquire an emitter block in Mappet's creative item tab.
+Вы можете взять блок-излучатель в панели Маппета в режиме творчества.
 
-![Emitter block](https://i.imgur.com/fAZNtpj.png)
+![Блок-излучатель](https://i.imgur.com/fAZNtpj.png)
 
-## Configuration
+## Настройка
 
-To configure an emitter block, place it down somewhere, and right click it. You'll see following screen:
+Дабы начать настройку блока-излучателя, поставьте его где-либо в мире и кликните по нему правой кнопкой мыши. Вы увидите следующее меню:
 
-![Emitter block's configuration screen](https://i.imgur.com/7bVWN3T.png)
+![Экран настройки блока-излучателя](https://i.imgur.com/7bVWN3T.png)
 
-### Expression
+### Выражение
 
-**Expression** field allows to input an [expression](./Expressions) that will be executed every 5 ticks (`0.25` seconds). If the given expression evaluates to `0`, then the block won't emit any redstone signal. Otherwise if it evaluates to any value other than `0`, then it will emit redstone signal.
+Поле **выражения** позволяет ввести [выражение](./Expressions), которое будет исполняться каждые 5 тиков (`0.25` секунд). Если результат заданного выражения равняется  `0`, то излучать сигнал редстоуна блок не будет. Во всех иных случаях, если результат значения не равняется `0`, то сигнал излучаться всё же будет.
 
-### Radius
+### Радиус
 
-**Radius** field allows to configure distance upon which it will execute its expression. If one ore more players are within the distance of the emitter block, then it will update its signal depending upon expression. If there are no players within its radius, then it won't update its redstone signal.
+Поле **радиуса** позволяет настраивать дистанцию, с которой будет выполняться выражение. Если в зоне доступа блока находятся один или более игроков, то он будет обновлять свой сигнал, основываясь на выражении. Если в радиусе блока-излучателя игроков нет, то и обновлять свой сигнал он также не будет.
