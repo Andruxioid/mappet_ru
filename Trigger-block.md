@@ -1,34 +1,34 @@
-Trigger is a Mappet block which allows to add [triggers](./Trigger) for when a player left or right clicks on the block. Trigger block can be used for variety of things:
+Блок-триггер это блок Маппета, который позволяет добавлять [триггеры](https://github.com/Andruxioid/mappet_ru/blob/main/%D0%A2%D1%80%D0%B8%D0%B3%D0%B3%D0%B5%D1%80.md) когда игрока нажимает левой или правой кнопкой мыши по блоку. Блок-триггер можно использовать для множества вещей:
 
-* Open a dialogue for a player to inspect some kind of item lying on the floor (let's say inspect a skull)
-* Open a dialogue with a crafting table (this will create an immersion of a workbench)
-* Execute an event which will open a secret door
-* Decorative block that upon hitting will be doing some sound (like a bell), etc.
+* Открыть диалог игроку для того, чтобы поближе рассмотреть какую-то вещицу, валяющуюся на полу (ну, к примеру, скажем, череп)
+* Открыть диалог с рецептом крафта (выйдет такой себе диегестический верстак)
+* Исполнить событие, которое откроет секретный проход
+* Декоративный блок, который издаст какой-нибудь звук от удара (типа колокола), и т.д.
 
-You can acquire a trigger block in Mappet's creative item tab.
+Вы можете взять блок-триггер во вкладке Маппета в режиме творчества.
 
-![Trigger block](https://i.imgur.com/I4IoHI6.png)
+![Блок-триггер](https://i.imgur.com/I4IoHI6.png)
 
-### Finding a trigger block
+### Нахождение блока-триггера
 
-Since trigger blocks are non solid invisible blocks, it might be hard to find them when creating a map. However, you can see the locations of trigger blocks (yellow cubes) when F3 debug screen is enabled.
+Так как блоки-триггеры это невидимые нетвёрдые блоки, найти их при создании карты может быть достаточно сложно. Однако, вы всегда сможете увидеть позицию блоков-триггеров (жёлтых кубов) при включении экрана отладки на F3.
 
-This **works only in creative** mode.
+Эта функция **работает исключительно в режиме творчества**.
 
-![Trigger block in F3 debug screen](https://i.imgur.com/7Sthny0.png)
+![Отображение блока-триггера на экране откладки F3](https://i.imgur.com/7Sthny0.png)
 
-## Configuration
+## Настройка
 
-To configure a trigger block, place it down somewhere, and right click it. You'll see following screen:
+Дабы начать настройку блока-триггера, поставьте его где-либо в мире и кликните по нему правой кнопкой мыши. Вы увидите следующий экран:
 
-![Trigger block's configuration screen](https://i.imgur.com/42o2JOZ.png)
+![Экран настройки блока-триггера](https://i.imgur.com/42o2JOZ.png)
 
-### Left and right click triggers
+### Триггеры левой и правой кнопки мыши
 
-Left and right click [triggers](./Trigger) allow to setup a trigger which will be executed upon player left clicking and right clicking the block.
+[Триггеры](https://github.com/Andruxioid/mappet_ru/blob/main/%D0%A2%D1%80%D0%B8%D0%B3%D0%B3%D0%B5%D1%80.md) левой и правой кнопок мыши позволяют установить триггер, исполняемый при нажатии игроком левой или правой кнопки мыши по блоку соответственно.
 
-In creative mode, however, you **can't test left** click trigger (you'll need to change to survival or adventure mode), because it will break the block. However you can test right click trigger by **sneaking and right clicking** the block.
+Тем не менее, в режиме творчества, вы **не сможете протестировать** триггер левой кнопки мыши (вам придётся сменить свой режим на выживание или приключение), так как удар в нём сломает блок. Триггер правой кнопки мыши вы можете протестировать, **встав на шифт и кликнув правой кнопкой мыши** по блоку.
 
-## Collidable
+## Имеет коллизию
 
-Collidable toggle allows to toggle trigger block's bounding box, meaning you can make trigger block behave like a barrier block.
+Переключатель «Имеет коллизию» позволяет включить или выключить бокс коллизии (столкновений) блока-триггера, это означает, что вы можете дать блоку-триггеру свойства блока-барьера.
