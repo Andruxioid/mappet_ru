@@ -1,34 +1,34 @@
-Quest chains is a special data type that uses the node system (more about node system can be found on [nodes](./Nodes) page) to represent quest progression. Quest chains are used within [dialogue system](./Dialogues) to provide [quests](./Quests) out of the dialogue.
+Quest chains is a special data type that uses the node system (больше о системе нодов можно узнать на странице [нодов](https://github.com/Andruxioid/mappet_ru/blob/main/%D0%9D%D0%BE%D0%B4%D1%8B.md)) to represent quest progression. Quest chains are used within [dialogue system](./Dialogues) to provide [квесты](https://github.com/Andruxioid/mappet_ru/edit/main/%D0%9A%D0%B2%D0%B5%D1%81%D1%82%D1%8B.md) out of the dialogue.
 
-Quest chains can be managed in [Mappet dashboard](./Mappet-dashboard). The last panel in the left sidebar opens quest chain editor.
+Цепочками квестов можно управлять в [Главной панели Маппета](./Mappet-dashboard). The last panel in the left sidebar opens quest chain editor.
 
-## Editing
+## Редактирование
 
-Once you pick or create a quest chain, you'd see an editor like this:
+Как только вы создадите или выберете цепочку квестов, вы увидите вот такой редактор:
 
-![Quest chain editor](https://i.imgur.com/xaR0gwu.png)
+![Редактор цепочек квестов](https://i.imgur.com/xaR0gwu.png)
 
-It works just like the node editor for dialogue and nodes, however, it provides only a single type of node in its system, and it's the quest node.
+Работает он ровно так же, как работает редактор диалогов или нодов в целом, однако он в своей системе имеет единственный тип нода - нод квеста.
 
-### Quest node
+### Нод квеста
 
-Once you select a quest node. Beside the common **Title** field, there are also three fields:
+Once you select a quest node beside the common **Title** field, there are also three fields:
 
-* **Quest** field determines the quest by the given ID that will be used to display in the dialogue
-* **Quest giver** is the ID of an NPC, `[subject_id]` if the dialogue shown through `/mp dialogue open` [command](https://github.com/mchorse/mappet/wiki/Commands#mp-dialogue-open-target-id-subject_id), which will give quest, meaning you would be able to see the quest only if the NPC or the `[subject_id]` matches **Quest giver**
+* Поле **Квест** field determines the quest by the given ID that will be used to display in the dialogue
+* **Квестодатель** это ID NPC, `[subject_id]` if the dialogue shown through `/mp dialogue open` [command](https://github.com/mchorse/mappet/wiki/Commands#mp-dialogue-open-target-id-subject_id), which will give quest, meaning you would be able to see the quest only if the NPC or the `[subject_id]` matches **Quest giver**
 * **Quest receiver** same thing as **Quest giver** but for completing quests, i.e. which NPC/`[subject_id]` allows to hand in the completed quest
 
-### Hierarchy
+### Иерархия
 
-The way you specify the quest chain's progression is by connecting existing nodes. Nodes that don't have input connection (top connection) are the quest chain starters, they are the first quest in the chain, while connected quest chain down the line are comes after you completed the quest up the chain.
+Соединяя существующие ноды между собой, вы создаёте прогрессию по цепочке квестов. Ноды, у которых нету вводных соединений (соединений сверху), дают начало квестовым цепочкам, иными словами они являются первыми квестами в цепочках, в то время как все остальные квестовые цепочки после них открываются после того, как вы пройдёте квесты, от которых к дальнейшим цепочкам идут соединения.
 
-Consider following:
+Обратите внимание на следующую картинку:
 
-![Quest chain example](https://i.imgur.com/FFei6X0.png)
+![Пример цепочки квестов](https://i.imgur.com/FFei6X0.png)
 
-In both cases those chains will certainly will work, however, the left chain is more readable and intuitive than the right chain. 
+В обоих случаях эти цепочки определённо будут работать, однако левая цепочка более читаема и интуитивна чем правая цепочка. 
 
-* The left chain reads as: complete `da`, then `test_nbt` and then `test`, and it works this way.
-* The right chain reads as: complete `easy`, then `example`, and then `quest`, **HOWEVER** instead it actually going to work like `quest`, then `example` and finally `easy`!
+* Левая цепочка читается как: завершите `da`, затем `test_nbt` а потом `test`, так вот это и работает.
+* Правая цепочка читается как: завершите `easy`, затем `example`, а после этого `quest`, **ОДНАКО** вместо этого порядок на самом деле будет таковым: сначала `quest`, затем `example` и после него `easy`!
 
-So when tying these quest nodes, make sure to select **first the bottom node**, and then the top node, and tie only after you selected in that order.
+Так что, при привязке квестовых нодов, удостовертесь, что вы выбрали **первый нод снизу**, а только потом выбирайте верхний и привязывайте их только после того, как вы выбрали их именно в таком порядке.
