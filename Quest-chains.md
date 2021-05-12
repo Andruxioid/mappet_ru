@@ -1,6 +1,6 @@
-Quest chains is a special data type that uses the node system (больше о системе нодов можно узнать на странице [нодов](https://github.com/Andruxioid/mappet_ru/blob/main/%D0%9D%D0%BE%D0%B4%D1%8B.md)) to represent quest progression. Quest chains are used within [dialogue system](./Dialogues) to provide [квесты](https://github.com/Andruxioid/mappet_ru/edit/main/%D0%9A%D0%B2%D0%B5%D1%81%D1%82%D1%8B.md) out of the dialogue.
+Цепочки квестов это особый тип данных, который использует нодовую систему (больше о системе нодов можно узнать на странице [нодов](https://github.com/Andruxioid/mappet_ru/blob/main/%D0%9D%D0%BE%D0%B4%D1%8B.md)) дабы отображать прогресс прохождения квестов. Цпочки квестов также используются в [системе диалогов](https://github.com/Andruxioid/mappet_ru/blob/main/%D0%94%D0%B8%D0%B0%D0%BB%D0%BE%D0%B3%D0%B8.md) дабы выдавать квесты [квесты](https://github.com/Andruxioid/mappet_ru/edit/main/%D0%9A%D0%B2%D0%B5%D1%81%D1%82%D1%8B.md) в диалогах.
 
-Цепочками квестов можно управлять в [Главной панели Маппета](./Mappet-dashboard). The last panel in the left sidebar opens quest chain editor.
+Цепочками квестов можно управлять в [Главной панели Маппета](https://github.com/Andruxioid/mappet_ru/blob/main/%D0%93%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F%20%D0%BF%D0%B0%D0%BD%D0%B5%D0%BB%D1%8C%20%D0%9C%D0%B0%D0%BF%D0%BF%D0%B5%D1%82%D0%B0.md). Последняя панель в левом боковом меню открывает редактор цепочек квестов.
 
 ## Редактирование
 
@@ -14,9 +14,9 @@ Quest chains is a special data type that uses the node system (больше о �
 
 Once you select a quest node beside the common **Title** field, there are also three fields:
 
-* Поле **Квест** field determines the quest by the given ID that will be used to display in the dialogue
-* **Квестодатель** это ID NPC, `[subject_id]` if the dialogue shown through `/mp dialogue open` [command](https://github.com/mchorse/mappet/wiki/Commands#mp-dialogue-open-target-id-subject_id), which will give quest, meaning you would be able to see the quest only if the NPC or the `[subject_id]` matches **Quest giver**
-* **Quest receiver** same thing as **Quest giver** but for completing quests, i.e. which NPC/`[subject_id]` allows to hand in the completed quest
+* Поле **Квест** определяет квест по заданному ID, которое будет будет использовано в диалоге.
+* **Квестодатель**, фактически это ID NPC, в котором используется аргумент `[subject_id]` если диалог открывается посредством [команды](https://github.com/Andruxioid/mappet_ru/blob/main/%D0%9A%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B.md#%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B-%D0%B4%D0%B8%D0%B0%D0%BB%D0%BE%D0%B3%D0%BE%D0%B2) `/mp dialogue open`, что выдаст квест, означая, что вы сможете увидеть квест только если NPC или аргумент `[subject_id]` соответствует значению **Квестодателя**.
+* **Квестополучатель** это та же штука, что и **Квестодатель**, единственное отличие которой в том, что она предназначена для завершения квестов, т.е. какой NPC/`[subject_id]` позволит сдать выполненный квест.
 
 ### Иерархия
 
