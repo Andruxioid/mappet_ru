@@ -38,15 +38,15 @@ NPC можно управлять в [главной панели Маппета
 
 #### Health options
 
-* **Максимальное ХП** Определяет сколько очков здоровья будет у NPC. `2` это полное сердечко (`20` это значение здоровья игрока по умолчанию).
+* **Максимальное ХП** Определяет сколько очков здоровья будет у NPC. `2` это полное сердwt (`20` это значение здоровья игрока по умолчанию).
 * **Начальное ХП** determines how many health points will NPC have upon spawning. Naturally, it can't be greater than **Max HP**.
 * **HP regeneration delay** determines how many ticks (`20` ticks = `1` second) should pass until the NPC will start regenerating one heart (i.e. after getting hit).
 * **HP regeneration frequency** determines after how many ticks every heart will be regenerated.
 
 #### Урон
 
-* **Урон** determines how many hearts (without armor) NPC will deal upon hitting an enemy.
-* **Урон от падения** determines whether NPC can get damaged by fall damage.
+* **Урон** определяет сколько сердец (без учёта брони) будет забирать атака NPC.
+* **Урон от падения** определяет будет ли NPC получать determines whether NPC can get damaged by fall damage.
 * **Урон от огня** determines whether NPC can get damaged by fire damage.
 * **Неуязвимый** determines whether NPC can get damaged at all.
 * **Смертный** determines whether NPC can be killed. This makes NPC only killable by the `/kill` command. The health is still can be depleted to a value that is close to `0`.
@@ -66,12 +66,12 @@ NPC можно управлять в [главной панели Маппета
 * **Осматривается** будет ли NPC осматриваться по сторонам в состоянии бездействия
 * **Бродит** будет ли NPC бродить туда-сюда по локации
 * Напоследок у нас есть большой перечень [триггеров](https://github.com/Andruxioid/mappet_ru/blob/main/%D0%A2%D1%80%D0%B8%D0%B3%D0%B3%D0%B5%D1%80.md) на все случаи жизни:
-    * **При инициализации NPC** which gets triggered upon NPCs summoning via a command or NPC tool.
-    * **При взаимодействии с NPC** which gets triggered upon player right clicking the NPC.
-    * **При получении урона NPC** which gets triggered when an NPC gets hurt.
-    * **При смерти NPC** which gets triggered when an NPC dies.
-    * **На тике NPC** which gets triggered every tick when an NPC exists.
-    * **На цели NPC** (**ещё не используется**) which will be used when an NPC targets an entity
+    * **При инициализации NPC** срабатывающий когда NPC спавнится посредством команды или инструмента NPC.
+    * **При взаимодействии с NPC** срабатывающий когда игрок кликает по NPC правой кнопкой мыши.
+    * **При получении урона NPC** срабатывающий когда NPC получает урон.
+    * **При смерти NPC** срабатывающий когда NPC умирает.
+    * **На тике NPC** срабатывающий каждый тик существования NPC.
+    * **На цели NPC** (**ещё не используется**) срабатывающий когда NPC нацеливается на сущность.
 
 
 ## Инструмент NPC
