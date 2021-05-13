@@ -74,20 +74,20 @@ Here is the description of what main options on the top do:
     * **На цели NPC** (**ещё не используется**) which will be used when an NPC targets an entity
 
 
-## NPC tool
+## Инструмент NPC
 
-NPC tool is an item in Mappet's creative item tab which allows to simplify NPC spawning and editing.
+Инструмент NPC это предмет, находящийся в таблице Маппета режима творчества, который позволяет игроку упростить процесс редактирования и настройки NPC.
 
-![NPC tool](https://i.imgur.com/QV5SpBn.png)
+![Инструмент NPC](https://i.imgur.com/QV5SpBn.png)
 
-First, when you grab a brand new tool from the creative tabs, you need to configure the tool by and right clicking while sneaking (holding `Shift` key). A menu like this will appear: 
+Сперва, возьмите себе новый инструмент таблицы режима творчества; вам будет необходимо настроить инструмент кликнув правой кнопкой мыши с зажатой кнопкой Шифт. Появится вот такое меню: 
 
-![NPC tool screen](https://i.imgur.com/3h7vdTe.png)
+![Экран инструмента NPC](https://i.imgur.com/3h7vdTe.png)
 
-There you can pick the NPC's ID you want to spawn and its state. Once you picked the ID and state, you can close the menu, and right click on the ground to spawn an NPC by that ID and state. 
+Здесь вы можете выбрать ID NPC, которого вы хотите заспавнить и желаемое состояние этого самого NPC. Как только вы выберете ID и состояние, вы можете закрыть меню и кликнуть правой кнопкой мыши по земле, чтобы заспавнить NPC с выбранным ID и состоянием. 
 
-Beside that, you can also edit individual NPC's properties just like in the NPC editor:
+Кроме того, вы также можете редактировать отдельные свойства NPC ровно так же, как в редакторе NPC:
 
-![Individual NPC editor](https://i.imgur.com/Ubct0va.png)
+![Редактор отдельных NPC](https://i.imgur.com/Ubct0va.png)
 
-Once you'll close the menu, the NPC will get updated.
+Как только вы закроете меню, NPC обновится.
