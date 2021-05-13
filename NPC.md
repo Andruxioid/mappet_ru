@@ -1,33 +1,33 @@
-NPCs are Mappet entities that can be used for plethora of things. They can be traders, conversers, quest providers, companions, foes, bosses and etc. You can do so many things with them it's impossible to list all uses. NPCs utilize morphs which grants you freedom of being able to make them look like whatever you want them to look like.
+NPC это сущности Маппета, которых можно использовать для целого вороха вещей. Они могут быть торговцами, собеседниками, квестодателями, спутниками, врагами, боссами и так далее. С ними вы можете делать так много всего, что все использования перечислить попросту невозможно. NPC используют морфы, что даёт вам право выбрать его внешний вид полностью на свое усмотрение.
 
-NPCs can be spawned by `/mp npc summon` command, or by using the NPC tool, and edited using `/mp npc` [commands](https://github.com/mchorse/mappet/wiki/Commands#mp-npc-state-target-state) or using NPC tool.
+NPC можно призвать командой `/mp npc summon`, или посредством инструмента NPC и редактировать используя команду `/mp npc` [команды](https://github.com/Andruxioid/mappet_ru/blob/main/%D0%9A%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B.md#mp-npc-state-target-state) или исполльзуя инструмент NPC.
 
-NPCs can be managed in [Mappet dashboard](./Mappet-dashboard). The third panel in the left sidebar opens NPC editor.
+NPC можно управлять в [главной панели Маппета](https://github.com/Andruxioid/mappet_ru/blob/main/%D0%93%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F%20%D0%BF%D0%B0%D0%BD%D0%B5%D0%BB%D1%8C%20%D0%9C%D0%B0%D0%BF%D0%BF%D0%B5%D1%82%D0%B0.md). Третья панель в левом боком меню открывает редактор NPC.
 
-## Editing
+## Редактирование
 
-Once you pick or create an NPC, you'd see an editor like this:
+Как только вы создадите или выберете NPC, перед вами появится вот такой редактор:
 
-![NPC editor](https://i.imgur.com/mDe1NQt.png)
+![Редактор NPC](https://i.imgur.com/mDe1NQt.png)
 
-There you can edit NPC's states and individual state options. In this editor, you're essentially creating and configuring NPC blueprints for their behavior. 
+В нём вы можете редактировать параметры свойств и состояний каждого отдельного NPC. В этом редакторе вы, по сути, создаёте и настраиваете чертежи NPC дабы добиться от них желаемого поведения. 
 
-### Main options
+### Главные опции
 
 Here is the description of what main options on the top do:
 
-* **Path finding distance** allows to setup the maximum path distance which the NPC will use to traverse and find targets the world. The higher the number the more CPU resources it will use.
-* **Unique** (**not used yet**) will allow to make the NPC unique, meaning server will take care of its spawning so that there wouldn't be a possibility for incidents.
+* **Дистанция нахождения пути** позволяет установить максимальное расстояние пути по которому NPC будет идти в поисках своих целей в мире. Чем выше значение, тем больше нагрузка на центральный процессор.
+* **Уникальный** (**ещё не используется**) в будущем позволит сделать NPC уникальным, означая то, что сервер возьмёт на себя обязанности по спавну этого NPC дабы с ним не возникло никаких инцидентов.
 
-### States
+### Состояния
 
-On the left from the main property editor you can see the states list. These allow you to create different variants of the same NPC and later on change them using `/mp npc state` [command](./Commands#mp-npc-state-target-state). Same way as in other places within Mappet, you can right click on the list to add and remove states, and click on the list items to pick a state to edit.
+Слева от редактора главных опций вы увидите список состояний. Они позволят вам настроить разные варианты одного и того же NPC и потом сменять их используя [команду](https://github.com/Andruxioid/mappet_ru/blob/main/%D0%9A%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B.md#mp-npc-state-target-state) `/mp npc state`. Точно так же, как и в других модулях Маппета, вы можете кликнуть правой кнопкой мыши по списку чтобы добавить или удалить состояния, а также кликнуть по списку чтобы отредактировать состояние.
 
-`default` is the default state name that is used in Mappet when you omit the state.
+`default` это название состояния по умолчанию, использующееся всякий раз когда не указывается конкретное состояние NPC.
 
-### Options
+### Настройки
 
-Here is the breakdown of all options:
+Здесь находится описание всех доступных настроек:
 
 #### General options
 
@@ -60,18 +60,18 @@ Here is the breakdown of all options:
 * **Circulate patrol** allows to toggle whether NPC should return to the first point instead of going backward. So let's say we have 3 points. With the option disabled, the NPC will be patrolling 1, 2, 3, 2, 1, 2, 3, etc., while with circulate patrol enabled, the NPC will be patrolling like 1, 2, 3, 1, 2, 3, etc.
 * **Follow target** allows to input username or `@r` for random of a player which NPC should follow.
 
-#### Behavior
+#### Поведение
 
-* **Look at player** whether NPC will be looking at a player
-* **Look around** whether NPC will be looking around in the idle state
-* **Wander** whether NPC will randomly wander around
-* And finally there you have lots of [triggers](./Trigger) for:
-    * **On NPC initialization** which gets triggered upon NPCs summoning via a command or NPC tool.
-    * **On NPC interaction** which gets triggered upon player right clicking the NPC.
-    * **On NPC damaged** which gets triggered when an NPC gets hurt.
-    * **On NPC death** which gets triggered when an NPC dies.
-    * **On NPC tick** which gets triggered every tick when an NPC exists.
-    * **On NPC target** (**not used yet**) which will be used when an NPC targets an entity
+* **Смотрит на игрока** будет ли NPC смотреть на игрока
+* **Осматривается** будет ли NPC осматриваться по сторонам в состоянии бездействия
+* **Бродит** будет ли NPC бродить туда-сюда по локации
+* Напоследок у нас есть большой перечень [триггеров](https://github.com/Andruxioid/mappet_ru/blob/main/%D0%A2%D1%80%D0%B8%D0%B3%D0%B3%D0%B5%D1%80.md) на все случаи жизни:
+    * **При инициализации NPC** which gets triggered upon NPCs summoning via a command or NPC tool.
+    * **При взаимодействии с NPC** which gets triggered upon player right clicking the NPC.
+    * **При получении урона NPC** which gets triggered when an NPC gets hurt.
+    * **При смерти NPC** which gets triggered when an NPC dies.
+    * **На тике NPC** which gets triggered every tick when an NPC exists.
+    * **На цели NPC** (**ещё не используется**) which will be used when an NPC targets an entity
 
 
 ## NPC tool
