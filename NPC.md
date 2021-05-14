@@ -38,27 +38,27 @@ NPC можно управлять в [главной панели Маппета
 
 #### Health options
 
-* **Максимальное ХП** Определяет сколько очков здоровья будет у NPC. `2` это полное сердwt (`20` это значение здоровья игрока по умолчанию).
-* **Начальное ХП** determines how many health points will NPC have upon spawning. Naturally, it can't be greater than **Max HP**.
-* **HP regeneration delay** determines how many ticks (`20` ticks = `1` second) should pass until the NPC will start regenerating one heart (i.e. after getting hit).
-* **HP regeneration frequency** determines after how many ticks every heart will be regenerated.
+* **Максимальное ХП** Определяет сколько очков здоровья будет у NPC. `2` это полное сердце (`20` это значение здоровья игрока по умолчанию).
+* **Начальное ХП** определяет сколько очков здоровья будет у NPC на спавне. Естественно это значение не может быть больше значения **Максимального ХП**.
+* **Задержка восстановления ХП** определяет сколько тиков (`20` тиков = `1` секунда) должно пройти перед тем как NPC начнёт восстанавливать по сердцу (т.т. после принятия урона).
+* **Частота восстановления ХП** определяет через сколько тиков NPC восстановит себе все сердца.
 
 #### Урон
 
 * **Урон** определяет сколько сердец (без учёта брони) будет забирать атака NPC.
-* **Урон от падения** определяет будет ли NPC получать determines whether NPC can get damaged by fall damage.
-* **Урон от огня** determines whether NPC can get damaged by fire damage.
-* **Неуязвимый** determines whether NPC can get damaged at all.
-* **Смертный** determines whether NPC can be killed. This makes NPC only killable by the `/kill` command. The health is still can be depleted to a value that is close to `0`.
+* **Урон от падения** определяет будет ли NPC получать урон от падения.
+* **Урон от огня** определяет возможно ли нанести NPC урон огнём.
+* **Неуязвимый** определяет возможно ли нанести NPC урон в принципе.
+* **Смертный** определяет возможно ли убить NPC. При отключении этой опции, убить NPC можно будет только через команду `/kill`. Тем не менее, здоровье всё равно можно опустить атаками до уровня, близкого к `0`.
 
 #### Передвижение
 
-* **Скорость** determines how fast NPC walks, chases targets, patrols, etc. `1` is default Minecraft player walking speed.
-* **Может плавать** determines whether an NPC can float on the water.
-* **Имеет пост** toggles the post logic. When enabled, NPC will be returning to the block position specified under the toggle. The field underneath block position is the post's radius where NPC can safely wonder around until returning back to the post.
-* **Точки патруля** under patrol points you can setup patrolling for the NPC. ➕ on the right of the label allows to add a point. When adding a point it will use player's current position. You can remove the point by right clicking and ➖ **Remove block position**.
-* **Патрулирует по кругу** allows to toggle whether NPC should return to the first point instead of going backward. So let's say we have 3 points. With the option disabled, the NPC will be patrolling 1, 2, 3, 2, 1, 2, 3, etc., while with circulate patrol enabled, the NPC will be patrolling like 1, 2, 3, 1, 2, 3, etc.
-* **Следовать за целью** allows to input username or `@r` for random of a player which NPC should follow.
+* **Скорость** определяет с какой скоростью NPC ходит, догоняе цели, патрулирует и т.д. `1` означает скорость обычной Майнкрафтовской ходьбы.
+* **Может плавать** определяет может ли NPC находиться на поверхности воды.
+* **Имеет пост** подключает логику постов. Когда этот параметр включён, NPC будут возвращаться на позицию, указанную под переключателем. Поле под позицией отвечает за радиус, в котором NPC разрешено свободно бродить до того, как он вернётся обратно на пост.
+* **Точки патруля** под точками патруля вы можете установить точки, которые NPC будет должен патрулировать. ➕ справа от надписи позволяет добавить точку. При добавлении, точка возьмёт данные с текущей позиции игрока. Вы можете удалить точку правой кнопкой мыши посредством нажатия на ➖ **Удалить позицию блока** в контекстном меню.
+* **Патрулирует по кругу** позволяет включить необходимость для NPC возвращаться на первую точку пути вместо того, чтобы просто идти назад. Скажем, у вас есть 3 точки. Если эта опция отключена, то NPC будет ходить по точкам в последовательности 1, 2, 3, 2, 1, 2, 3, и т.д., в то время как если параметр **Патрулирует по кругу** включён, то NPC будет ходить по точкам в последовательности 1, 2, 3, 1, 2, 3 и т.д.
+* **Следовать за целью** позволяет ввести имя пользователя или `@r` для случайного игрока, за которым NPC должен следовать.
 
 #### Поведение
 
