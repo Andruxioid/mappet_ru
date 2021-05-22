@@ -1,0 +1,65 @@
+This document covers technical changes made to Mappet over testing periods so that you could have an insight of what was added, changed, fixed and most importantly broken in between dev-builds. 
+
+When updating, **make sure to back up your worlds**!
+
+# `-dev1` to `-dev2`
+
+## 🔨 Breaking changes
+
+You need **to be aware of following changes** when updating from `-dev1` to `-dev2`:
+
+* NPC ID was transferred to the state, so Matching NBT in kill objectives should be changed from `{NpcId:"%NPC_ID%"}` to `{State:{Id:"%NPC_ID%"}}`
+* Most of the fields that accepted expressions were transformed into a hybrid between expressions and condition editor, so in case expressions went missing, you'll have to manually retype them from let's say `"dialogue_read(\"test\", subject)"` into `{"Expression":"dialogue_read(\"test\", subject)","Mode":1}` within JSON files.
+* [Quest chain nodes](./Dialogues#quest-chain-node) now provide the ID (instead of NPC's ID or `[subject_id]`) that should quest nodes within a quest chain to [compare quest provider/receiver](Quest-chains#mechanics).
+
+## 🥵 New features 
+
+* Added [custom objective messages](./Quests#custom-objective-messages) to all quest objectives
+* Added new [state objective](./Quests#state-objective) which allows give an objective when player or global state changes
+* Added [support of expression parsing](./Dialogues#content-expressions) within dialogue reactions and phrases
+* Added [condition editor](./Conditions) with following condition blocks:
+    * **Quest** block, it allows to check for quest on specific player being complete, present or not present
+    * **State** block, it allows to check the value of the state
+    * **Dialogue** block, it allows to check whether a dialogue (or its sub dialogue) was read
+    * **Faction** block, it allows to check faction state of a player
+    * **Item** block, it allows to check inventory of a player
+    * **Condition** block, it allows to nest conditions
+    * **World time** block, it allows to check world's time
+* Added a toggle [to disallow user closing dialogue](./Dialogues#disallowing-player-to-close-the-dialogue) until they reach the end
+* Added an option to reaction dialogue nodes to [mark reading of the dialogue](./Dialogues#dialogue-reading) (writing to states)
+* Added [event hotkeys](./Event-hotkeys) which allow to trigger events when a player presses a key
+* Added [checker](./Checker) component which is a hybrid between [expressions](./Expressions) and [conditions](./Conditions)
+
+## 💡 QoL
+
+* Added additional handling to untie method:
+    * When selected one node, it will untie all of its children nodes (connections from bottom side)
+    * When selected two nodes, it will untie these two from each other
+* Added display of quest, faction, crafting table, and other IDs when in creative mode
+* Added an ability to drag and drop node connections from top and bottom of nodes
+* Added **Sort input nodes left-to-right** context menu and keybind in node editor to sort children node indices from left-to-right
+* Added labels and animations to call user for action
+* Added modal pickers to most of the fields to pick quest, dialogue, event, faction, quest chain and crafting table IDs without having to input them manually
+* Added colors and shadows to some context menus
+* Added ability to copy/paste crafting tables, quests, events, dialogues, NPCs, factions and quest chains by right clicking on the ID list on the right
+* Added **Edit in fullscreen...** context menu to some text fields (like Quest's description, Content of reaction and reply nodes, or any other text fields where a lot of text could be edited)
+* Changed layout of NPC editor to be like in McLib
+* Changed trigger layout to be more compact and intuitive
+* Changed scrolling speed in some modals
+* Changed dialogue to allow only reaction with no replies, quests or crafting (user may close the screen with Escape afterwards)
+* Changed [NPC tool](./NPC-tool#spawning-and-editing-npcs) to:
+    * Right click on ground to place NPC from the NPC and state configuration, and edit it immediately
+    * Sneak + right click on an NPC to remove NPC
+    * Sneak + right click on ground to place NPC from the NPC and state configuration
+* Moved NPC ID, unique (still not used) and path finding distance properties to NPC state
+* Moved NPC states editing to a separate modal
+
+## 🩹 Fixes
+
+* Fixed crash when clearing or removing an item slot in crafting creative screen
+* Fixed the label for `M` keybind saying remove selected
+* Fixed `/mp data clearing` happens twice on players that were present 
+* Fixed NPCs name being `entity.npc.name`
+* Fixed NPC `follow` property not working with player usernames
+* Fixed crafting triggers not working with dialogue's context
+* Remove `mappet:npc` entity from the morph system
